@@ -11,7 +11,7 @@ use Core\Cache\Type as CacheType;
 
 // document standard
 define('_STANDARD', 'html5');
-define('_TIMEZONE', 'America/New_York');
+define('_TIMEZONE', '{{ timezone }}');
 
 define('DEBUG', 1);
 // define('SQL_DEBUG', 1);
@@ -27,10 +27,10 @@ $session_type = Session::TYPE_BROWSER;
 $db_use = true;
 $db_type = DatabaseType::MYSQL;
 $db_config = array(
-		'host' => 'localhost',
-		'user' => 'root',
-		'pass' => 'caracal',
-		'name' => 'web_engine'
+		'host' => '{{ database.host }}',
+		'user' => '{{ database.username }}',
+		'pass' => '{{ database.password }}',
+		'name' => '{{ database.name }}'
 	);
 
 // configure code generation
