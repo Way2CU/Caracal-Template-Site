@@ -1,7 +1,7 @@
-Caracal-Site
-============
+Caracal-Template-Site
+=====================
 
-Default Caracal site with predefined Vagrantfile for easy start.
+Default Caracal site with predefined Vagrantfile for easy start. This version of base site structure contains commonly used template for even faster development.
 
 ### Preparation
 
@@ -15,7 +15,7 @@ git clone git@github.com:You/New-Site.git New-Site
 * Go in to `New-Site` directory;
 * We need to add [Caracal-Site](https://github.com/Way2CU/Caracal-Site) as `upstream` so Git knows where to pull things from. You do that with following command:
 ```
-git remote add upstream https://github.com/Way2CU/Caracal-Site.git
+git remote add upstream https://github.com/Way2CU/Caracal-Template-Site.git
 ```
 * We need to get `upstream` data. To do that issue the following command;
 ```
