@@ -11,7 +11,7 @@
 		phone - Text constant to use for phone number.
 -->
 <document>
-	<header class="template generic">
+	<header class="stock generic">
 		<a class="logo" href="url_Make()" cms:eval="href">
 			<img
 				src="_BASEURL.'/site/images/'.$template['logo']"

@@ -9,25 +9,25 @@
 /**
  * Generic header
  */
-header.template.generic {
+header.stock.generic {
 	white-space: nowrap;
 }
 
-header.template.generic a.logo {
+header.stock.generic a.logo {
 	display: inline-block;
 	line-height: 100%;
 }
 
-header.template.generic a.logo img {
+header.stock.generic a.logo img {
 	border: 0;
 }
 
-header.template.generic nav#main {
+header.stock.generic nav#main {
 	display: inline-block;
 	margin-left: 20px;
 	margin-right: 20px;
 }
 
-header.template.generic a.phone {
+header.stock.generic a.phone {
 	display: inline-block;
 }
