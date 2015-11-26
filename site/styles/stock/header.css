@@ -15,7 +15,7 @@ header.template.generic {
 
 header.template.generic a.logo {
 	display: inline-block;
-	line-height: 0;
+	line-height: 100%;
 }
 
 header.template.generic a.logo img {
