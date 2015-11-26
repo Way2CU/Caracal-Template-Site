@@ -9,6 +9,15 @@
 /**
  * Generic header
  */
+
+header.stock.generic.fixed {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 100000;
+}
+
 header.stock.generic {
 	white-space: nowrap;
 }
