@@ -6,7 +6,7 @@
 	logo image is set to `site_title` global language constant.
 
 	The following parameters are required:
-		logo - Full path URL to logo image;
+		logo - Image name inside of images directory;
 		menu - Relative path to menu items template;
 		phone - Text constant to use for phone number.
 -->
@@ -14,7 +14,7 @@
 	<header>
 		<a class="logo" href="url_Make()" cms:eval="href">
 			<img
-				src="$template['logo']"
+				src="_BASEURL.'/site/images/'.$template['logo']"
 				alt="site_title"
 				cms:eval="src"
 				cms:constant="alt"
