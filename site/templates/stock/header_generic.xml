@@ -8,10 +8,11 @@
 	The following parameters are required:
 		logo - Image name inside of images directory;
 		menu - Relative path to menu items template;
-		phone - Text constant to use for phone number.
+		phone - Text constant to use for phone number;
+		fixed - If present menu will be positioned fixed to the browser window.
 -->
 <document>
-	<header class="stock generic">
+	<header class="'stock generic'.(isset($template['fixed']) ? ' fixed' : '')" cms:eval="class">
 		<a class="logo" href="url_Make()" cms:eval="href">
 			<img
 				src="_BASEURL.'/site/images/'.$template['logo']"
