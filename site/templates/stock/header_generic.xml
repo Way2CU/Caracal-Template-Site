@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<!--
+	Generic header template has logo, main menu and phone number displayed. It's a simple
+	container template with support for mobile variation of the same. Alternative text for
+	logo image is set to `site_title` global language constant.
+
+	The following parameters are required:
+		logo - Full path URL to logo image;
+		menu - Relative path to menu items template;
+		phone - Text constant to use for phone number.
+-->
+<document>
+	<header>
+		<a class="logo" href="url_Make()" cms:eval="href">
+			<img
+				src="$template['logo']"
+				alt="site_title"
+				cms:eval="src"
+				cms:constant="alt"
+				/>
+		</a>
+
+		<nav id="main">
+			<cms:template file="$template['menu']" cms:eval="file"/>
+		</nav>
+
+		<a
+			class="phone"
+			href="'tel:'.urlencode(Language::getText($template['phone']))"
+			cms:eval="href"
+			>
+			<cms:text constant="$template['phone']" cms:eval="constant"/>
+		</a>
+	</header>
+</document>
