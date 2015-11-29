@@ -9,10 +9,14 @@
 		logo - Image name inside of images directory;
 		menu - Relative path to menu items template;
 		phone - Text constant to use for phone number;
+		phone_sprite_icon - SVG file and id of icon in images directory;
 		fixed - If present menu will be positioned fixed to the browser window.
+
+	The following parameters are required: logo, menu
 -->
 <document>
 	<header class="'stock generic'.(isset($template['fixed']) ? ' fixed' : '')" cms:eval="class">
+		<!-- Logo image leading to home page -->
 		<a class="logo" href="url_Make()" cms:eval="href">
 			<img
 				src="_BASEURL.'/site/images/'.$template['logo']"
@@ -22,16 +26,29 @@
 				/>
 		</a>
 
+		<!-- Main menu -->
 		<nav id="main">
 			<cms:template file="$template['menu']" cms:eval="file"/>
 		</nav>
 
-		<a
-			class="phone"
-			href="'tel:'.urlencode(Language::getText($template['phone']))"
-			cms:eval="href"
-			>
-			<cms:text constant="$template['phone']" cms:eval="constant"/>
-		</a>
+		<!-- Phone number icon -->
+		<cms:if condition="isset($template['phone'])">
+			<a
+				class="phone"
+				href="'tel:'.urlencode(Language::getText($template['phone']))"
+				cms:eval="href"
+				>
+				<cms:if condition="isset($template['phone_sprite_icon'])">
+					<svg>
+						<use
+							href="'#'.parse_url($template['phone_sprite_icon'], PHP_URL_FRAGMENT)"
+							xlink:href="$template['phone_sprite_icon']"
+							cms:eval="href,xlink:href"
+							/>
+					</svg>
+				</cms:if>
+				<cms:text constant="$template['phone']" cms:eval="constant"/>
+			</a>
+		</cms:if>
 	</header>
 </document>
