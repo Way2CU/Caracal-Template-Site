@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<!--
+	 Copyright text shows specified text constant as copyright. It's a predefined
+	 copyright container with simple styling and company logo.
+
+	 The following parameters are accepted:
+	 	light - If present colored logo will be used in stead of black;
+		holder - Copyright holder text constant;
+		text - Copyright text constant.
+
+	The following parameters are required: holder
+-->
 <document>
-	<div class="copyright">
-		<cms:text constant="copyright_text"/>
+	<div class="'copyright'.(isset($template['light']) ? ' light' : '')" cms:eval="class">
+		<cms:text constant="$template['holder']" cms:eval="constant"/>
+		<cms:if condition="isset($template['text'])">
+			<br/>
+			<cms:text constant="$template['text']" cms:eval="constant"/>
+		</cms:if>
 	</div>
 </document>

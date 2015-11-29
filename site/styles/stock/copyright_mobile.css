@@ -15,18 +15,18 @@ footer div.copyright {
 	background-position: left center;
 	background-size: 50px 50px;
 
-	color: white;
-	color: rgba(255, 255, 255, 0.5);
 	font-size: 0.9rem;
 	direction: ltr;
 }
 
+footer div.copyright.light {
+	background-image: url(../../images/stock/way2cu-color.svg);
+}
+
 footer div.copyright a {
-	color: white;
-	color: rgba(255, 255, 255, 0.5);
-	transition:0.3s all;
+	text-decoration: underline;
 }
 
 footer div.copyright a:hover {
-	color: white;
+	text-decoration: none;
 }

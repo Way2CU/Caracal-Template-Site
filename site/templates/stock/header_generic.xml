@@ -5,7 +5,7 @@
 	container template with support for mobile variation of the same. Alternative text for
 	logo image is set to `site_title` global language constant.
 
-	The following parameters are required:
+	The following parameters are accepted:
 		logo - Image name inside of images directory;
 		menu - Relative path to menu items template;
 		phone - Text constant to use for phone number;
