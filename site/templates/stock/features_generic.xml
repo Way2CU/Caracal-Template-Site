@@ -12,11 +12,11 @@
 <document>
 	<li class="stock feature">
 		<!-- Sprite image -->
-		<cms:if condition="isset($template['sprite_icon'])">
+		<cms:if condition="isset($template['sprite'])">
 			<svg>
 				<use
-					href="'#'.parse_url($template['sprite_icon'], PHP_URL_FRAGMENT)"
-					xlink:href="$template['sprite_icon']"
+					href="'#'.$params['text_id']"
+					xlink:href="$template['sprite'].'#'.$params['text_id']"
 					cms:eval="href,xlink:href"
 					/>
 			</svg>
