@@ -5,7 +5,7 @@
 
 	The following parameters are accepted:
 		title - If present will show title of specified article;
-		sprite_icon - SVG file and id of icon in images directory.
+		sprite - SVG file in images directory.
 
 	The following parameters are required: sprite_icon
 -->
