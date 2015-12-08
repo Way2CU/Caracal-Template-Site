@@ -10,12 +10,31 @@
 		menu - Relative path to menu items template;
 		phone - Text constant to use for phone number;
 		phone_sprite_icon - SVG file and id of icon in images directory;
-		fixed - If present menu will be positioned fixed to the browser window.
+		fixed - If present menu will be positioned fixed to the browser window;
+		mobile_menu_sprite_icon - SVG file and id of icon in images directory.
 
 	The following parameters are required: logo, menu
 -->
 <document>
-	<header class="'stock generic'.(isset($template['fixed']) ? ' fixed' : '')" cms:eval="class">
+	<header
+		class="'stock generic mobile_title'.(isset($template['fixed']) ? ' fixed' : '')"
+		cms:eval="class"
+		>
+		<!-- Toggle mobile menu link -->
+		<cms:mobile>
+			<a class="menu">
+				<cms:if condition="isset($template['mobile_menu_sprite_icon'])">
+					<svg>
+						<use
+							href="'#'.parse_url($template['mobile_menu_sprite_icon'], PHP_URL_FRAGMENT)"
+							xlink:href="$template['mobile_menu_sprite_icon']"
+							cms:eval="href,xlink:href"
+							/>
+					</svg>
+				</cms:if>
+			</a>
+		</cms:mobile>
+
 		<!-- Logo image leading to home page -->
 		<a class="logo" href="url_Make()" cms:eval="href">
 			<img
@@ -27,9 +46,11 @@
 		</a>
 
 		<!-- Main menu -->
-		<nav id="main">
-			<cms:template file="$template['menu']" cms:eval="file"/>
-		</nav>
+		<cms:desktop>
+			<nav id="main">
+				<cms:template file="$template['menu']" cms:eval="file"/>
+			</nav>
+		</cms:desktop>
 
 		<!-- Phone number icon -->
 		<cms:if condition="isset($template['phone'])">
@@ -51,4 +72,12 @@
 			</a>
 		</cms:if>
 	</header>
+
+	<cms:mobile>
+		<div class="mobile_menu">
+			<nav id="main">
+				<cms:template file="$template['menu']" cms:eval="file"/>
+			</nav>
+		</div>
+	</cms:mobile>
 </document>
