@@ -68,7 +68,10 @@
 							/>
 					</svg>
 				</cms:if>
-				<cms:text constant="$template['phone']" cms:eval="constant"/>
+
+				<cms:desktop>
+					<cms:text constant="$template['phone']" cms:eval="constant"/>
+				</cms:desktop>
 			</a>
 		</cms:if>
 	</header>
