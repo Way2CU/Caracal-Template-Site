@@ -7,6 +7,7 @@
 
 	The following parameters are accepted:
 		logo - Image name inside of images directory;
+		slogan - Text constant to be shown next to logo image;
 		menu - Relative path to menu items template;
 		phone - Text constant to use for phone number;
 		phone_sprite_icon - SVG file and id of icon in images directory;
@@ -43,6 +44,9 @@
 				cms:eval="src"
 				cms:constant="alt"
 				/>
+			<cms:if condition="isset($template['slogan'])">
+				<span><cms:text constant="$template['slogan']" cms:eval="constant"/></span>
+			</cms:if>
 		</a>
 
 		<!-- Main menu -->
