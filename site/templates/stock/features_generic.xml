@@ -4,7 +4,7 @@
 	Generic features template with image, text and optional title.
 
 	The following parameters are accepted:
-		title - If present will show title of specified article;
+		title  - If present will show title of specified article;
 		sprite - SVG file in images directory.
 
 	The following parameters are required: sprite_icon

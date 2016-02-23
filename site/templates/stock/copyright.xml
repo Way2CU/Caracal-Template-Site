@@ -5,9 +5,9 @@
 	 copyright container with simple styling and company logo.
 
 	 The following parameters are accepted:
-	 	light - If present colored logo will be used in stead of black;
+	 	light  - If present colored logo will be used in stead of black;
 		holder - Copyright holder text constant;
-		text - Copyright text constant.
+		text   - Copyright text constant.
 
 	The following parameters are required: holder
 -->
