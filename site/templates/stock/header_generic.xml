@@ -12,7 +12,8 @@
 		phone                   - Text constant to use for phone number;
 		phone_sprite_icon       - SVG file and id of icon in images directory;
 		fixed                   - If present menu will be positioned fixed to the browser window;
-		mobile_menu_sprite_icon - SVG file and id of icon in images directory.
+		mobile_menu_sprite_icon - SVG file and id of icon in images directory;
+		sprite                  - SVG file containing sprites;
 
 	The following parameters are required: logo, menu
 -->
@@ -25,13 +26,11 @@
 		<cms:mobile>
 			<a class="menu">
 				<cms:if condition="isset($template['mobile_menu_sprite_icon'])">
-					<svg>
-						<use
-							href="'#'.parse_url($template['mobile_menu_sprite_icon'], PHP_URL_FRAGMENT)"
-							xlink:href="$template['mobile_menu_sprite_icon']"
-							cms:eval="href,xlink:href"
-							/>
-					</svg>
+					<cms:svg
+						file="$template['sprite']"
+						symbol="$template['mobile_menu_sprite_icon']"
+						cms:eval="file,symbol"
+						/>
 				</cms:if>
 			</a>
 		</cms:mobile>
@@ -50,11 +49,11 @@
 		</a>
 
 		<!-- Main menu -->
-		<cms:desktop>
+		<cms:if condition="_DESKTOP_VERSION and isset($template['menu'])">
 			<nav id="main">
 				<cms:template file="$template['menu']" cms:eval="file"/>
 			</nav>
-		</cms:desktop>
+		</cms:if>
 
 		<!-- Phone number icon -->
 		<cms:if condition="isset($template['phone'])">
@@ -64,13 +63,11 @@
 				cms:eval="href"
 				>
 				<cms:if condition="isset($template['phone_sprite_icon'])">
-					<svg>
-						<use
-							href="'#'.parse_url($template['phone_sprite_icon'], PHP_URL_FRAGMENT)"
-							xlink:href="$template['phone_sprite_icon']"
-							cms:eval="href,xlink:href"
-							/>
-					</svg>
+					<cms:svg
+						file="$template['sprite']"
+						symbol="$template['phone_sprite_icon']"
+						cms:eval="file,symbol"
+						/>
 				</cms:if>
 
 				<cms:desktop>
@@ -80,11 +77,11 @@
 		</cms:if>
 	</header>
 
-	<cms:mobile>
+	<cms:if condition="_MOBILE_VERSION and isset($template['menu'])">
 		<div class="mobile_menu">
 			<nav id="main">
 				<cms:template file="$template['menu']" cms:eval="file"/>
 			</nav>
 		</div>
-	</cms:mobile>
+	</cms:if>
 </document>
