@@ -13,13 +13,11 @@
 	<li class="stock feature">
 		<!-- Sprite image -->
 		<cms:if condition="isset($template['sprite'])">
-			<svg>
-				<use
-					href="'#'.$params['text_id']"
-					xlink:href="$template['sprite'].'#'.$params['text_id']"
-					cms:eval="href,xlink:href"
-					/>
-			</svg>
+			<cms:svg
+				file="$template['sprite']"
+				symbol="$params['text_id']"
+				cms:eval="file,symbol"
+				/>
 		</cms:if>
 
 		<!-- Title -->
