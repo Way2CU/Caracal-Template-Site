@@ -23,7 +23,7 @@
 		cms:eval="class"
 		>
 		<!-- Toggle mobile menu link -->
-		<cms:mobile>
+		<cms:if condition="_MOBILE_VERSION and isset($template['menu'])">
 			<a class="menu">
 				<cms:if condition="isset($template['mobile_menu_sprite_icon'])">
 					<cms:svg
@@ -33,7 +33,7 @@
 						/>
 				</cms:if>
 			</a>
-		</cms:mobile>
+		</cms:if>
 
 		<!-- Logo image leading to home page -->
 		<a class="logo" href="url_Make()" cms:eval="href">
