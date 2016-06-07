@@ -1,0 +1,29 @@
+<!-- 
+  Generic article template with title, timestamp, text, author, text
+
+  The folloiwng parameters are optional:
+    title     - If present will show title of article;
+    timestamp - If present will show timestamp of article;
+    author    - If present will show user name of article.
+ -->
+<document>
+  <article class="stock generic">
+    <!-- Title -->
+    <cms:if condition="isset($template['title'])">
+      <h2><cms:var param="title" multilanguage="yes"/></h2>
+    </cms:if>
+
+    <!-- Timestamp -->
+    <cms:if condition="isset($template['timestamp'])">
+      <span class="timestamp"><cms:var param="timestamp" multilanguage="yes"/></span>
+    </cms:if>
+
+    <!-- Author -->
+    <cms:if condition="isset($template['author'])">
+      <span class="author"><cms:var param="author" multilanguage="yes"/></span>
+    </cms:if>
+
+    <!-- Content -->
+    <cms:markdown param="content" multilanguage="yes"/>
+  </article>
+</document>
