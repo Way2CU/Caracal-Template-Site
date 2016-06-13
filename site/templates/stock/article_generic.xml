@@ -9,7 +9,7 @@
     class     - Apply class name as text_id param of article module
  -->
 <document>
-  <article class="isset($template['class'])) ? $params['text_id'] : false" cms:optional="class">
+  <article class="isset($template['class']) ? $params['text_id'] : false" cms:optional="class">
     <!-- Title -->
     <cms:if condition="isset($template['title'])">
       <h2><cms:var param="title" multilanguage="yes"/></h2>
