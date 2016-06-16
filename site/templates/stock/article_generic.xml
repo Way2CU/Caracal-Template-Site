@@ -1,0 +1,31 @@
+<!-- 
+  Generic article template has option to set article title, timestamp and author of the article.
+  Template supports both desktop and mobile versions.
+
+  The folloiwng parameters are optional:
+    title     - Show title of article;
+    timestamp - Show timestamp of article;
+    author    - Show user name of article.
+    class     - Apply class name as text_id param of article module
+ -->
+<document>
+  <article class="isset($template['class']) ? $params['text_id'] : false" cms:optional="class">
+    <!-- Title -->
+    <cms:if condition="isset($template['title'])">
+      <h2><cms:var param="title" multilanguage="yes"/></h2>
+    </cms:if>
+
+    <!-- Timestamp -->
+    <cms:if condition="isset($template['timestamp'])">
+      <span class="timestamp"><cms:var param="timestamp" multilanguage="yes"/></span>
+    </cms:if>
+
+    <!-- Author -->
+    <cms:if condition="isset($template['author'])">
+      <span class="author"><cms:var param="author" multilanguage="yes"/></span>
+    </cms:if>
+
+    <!-- Content -->
+    <cms:markdown param="content" multilanguage="yes"/>
+  </article>
+</document>
