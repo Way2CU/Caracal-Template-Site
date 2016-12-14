@@ -2,29 +2,29 @@
   Generic gallery image template with option for showing title and description.
 
   The folllowing parameters are required:
-    thumbnail_size - Specifies the size of thumbnail image.
+	thumbnail_size - Specifies the size of thumbnail image.
 
   The following parameters are optional:
-    title       - If present will show title of specified image;
-    description - If present will show description of image;
-    constrain   - Specifies the constrain aspects (see Thumbnail in gallery for more information).
+	title       - If present will show title of specified image;
+	description - If present will show description of image;
+	constrain   - Specifies the constrain aspects (see Thumbnail in gallery for more information).
  -->
 <document>
-    <a class="stock generic image" href="$params['image']" cms:eval="href">
-      <img 
-        src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain'])) ? constant($template['constrain'])) : Thumbnail::CONSTRAIN_BOTH)"
-        alt="$params['title'][$language]"
-        cms:eval="src,alt"
-        />
+	<a class="stock generic image" href="$params['image']" cms:eval="href">
+		<img
+			src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain'])) ? constant($template['constrain'])) : Thumbnail::CONSTRAIN_BOTH)"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
 
-      <!-- Title -->
-      <cms:if condition="isset($template['title'])">
-        <h4><cms:var param="name" multilanguage="yes"/></h4>
-      </cms:if>
+		<!-- Title -->
+		<cms:if condition="isset($template['title'])">
+			<h4><cms:var param="name" multilanguage="yes"/></h4>
+		</cms:if>
 
-      <!-- Description -->
-      <cms:if condition="isset($template['description'])">
-        <cms:markdown param="description" multilanguage="yes"/>
-      </cms:if>
-    </a>
+		<!-- Description -->
+		<cms:if condition="isset($template['description'])">
+			<cms:markdown param="description" multilanguage="yes"/>
+		</cms:if>
+	</a>
 </document>

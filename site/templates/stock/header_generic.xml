@@ -36,7 +36,7 @@
 		</cms:if>
 
 		<!-- Logo image leading to home page -->
-		<a class="logo" href="url_Make()" cms:eval="href">
+		<a class="logo" href="URL::make()" cms:eval="href">
 			<img
 				src="_BASEURL.'/site/images/'.$template['logo']"
 				alt="site_title"
