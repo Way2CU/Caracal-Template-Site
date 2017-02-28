@@ -8,6 +8,7 @@
 	The following parameters are accepted:
 		logo                    - Image name inside of images directory;
 		logo_sprite_icon        - Sprite name for logo;
+		class                   - Class for the header tag;
 		slogan                  - Text constant to be shown next to logo image;
 		menu                    - Relative path to menu items template;
 		phone                   - Text constant to use for phone number;
@@ -20,7 +21,7 @@
 -->
 <document>
 	<header
-		class="'stock generic mobile_title'.(isset($template['fixed']) ? ' fixed' : '')"
+		class="'stock generic mobile_title'.(isset($template['fixed']) ? ' fixed' : '').(isset($template['class']) ? $template['class'] : '')"
 		cms:eval="class"
 		>
 		<!-- Toggle mobile menu link -->
