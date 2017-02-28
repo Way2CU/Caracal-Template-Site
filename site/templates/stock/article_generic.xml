@@ -1,31 +1,49 @@
-<!-- 
+<!--
   Generic article template has option to set article title, timestamp and author of the article.
   Template supports both desktop and mobile versions.
 
   The folloiwng parameters are optional:
-    title     - Show title of article;
-    timestamp - Show timestamp of article;
-    author    - Show user name of article.
-    class     - Apply class name as text_id param of article module
+	title     - Show title of article;
+	title_tag - Tag to use for title, defaults to h2;
+	timestamp - Show timestamp of article;
+	author    - Show user name of article.
+	class     - Apply class name as text_id param of article module
  -->
 <document>
-  <article class="isset($template['class']) ? $params['text_id'] : false" cms:optional="class">
-    <!-- Title -->
-    <cms:if condition="isset($template['title'])">
-      <h2><cms:var param="title" multilanguage="yes"/></h2>
-    </cms:if>
+	<article class="isset($template['class']) ? $params['text_id'] : false" cms:optional="class">
+		<!-- Title -->
+		<cms:if condition="isset($template['title'])">
+			<cms:choice value="isset($template['title_tag']) ? $template['title_tag'] : 'h1'" cms:eval="value">
+				<option value="h1">
+					<h1><cms:var param="title" multilanguage="yes"/></h1>
+				</option>
+				<option value="h2">
+					<h2><cms:var param="title" multilanguage="yes"/></h2>
+				</option>
+				<option value="h3">
+					<h3><cms:var param="title" multilanguage="yes"/></h3>
+				</option>
+				<option value="h4">
+					<h4><cms:var param="title" multilanguage="yes"/></h4>
+				</option>
+				<option value="h5">
+					<h5><cms:var param="title" multilanguage="yes"/></h5>
+				</option>
+			</cms:choice>
+		</cms:if>
 
-    <!-- Timestamp -->
-    <cms:if condition="isset($template['timestamp'])">
-      <span class="timestamp"><cms:var param="timestamp" multilanguage="yes"/></span>
-    </cms:if>
 
-    <!-- Author -->
-    <cms:if condition="isset($template['author'])">
-      <span class="author"><cms:var param="author" multilanguage="yes"/></span>
-    </cms:if>
+		<!-- Timestamp -->
+		<cms:if condition="isset($template['timestamp'])">
+			<span class="timestamp"><cms:var param="timestamp" multilanguage="yes"/></span>
+		</cms:if>
 
-    <!-- Content -->
-    <cms:markdown param="content" multilanguage="yes"/>
-  </article>
+		<!-- Author -->
+		<cms:if condition="isset($template['author'])">
+			<span class="author"><cms:var param="author" multilanguage="yes"/></span>
+		</cms:if>
+
+		<!-- Content -->
+		<cms:markdown param="content" multilanguage="yes"/>
+	</article>
 </document>
