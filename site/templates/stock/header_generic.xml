@@ -7,6 +7,7 @@
 
 	The following parameters are accepted:
 		logo                    - Image name inside of images directory;
+		logo_sprite_icon        - Sprite name for logo;
 		slogan                  - Text constant to be shown next to logo image;
 		menu                    - Relative path to menu items template;
 		phone                   - Text constant to use for phone number;
@@ -37,12 +38,25 @@
 
 		<!-- Logo image leading to home page -->
 		<a class="logo" href="URL::make()" cms:eval="href">
-			<img
-				src="_BASEURL.'/site/images/'.$template['logo']"
-				alt="site_title"
-				cms:eval="src"
-				cms:constant="alt"
-				/>
+			<!-- Use logo image -->
+			<cms:if condition="isset($template['logo'])">
+				<img
+					src="_BASEURL.'/site/images/'.$template['logo']"
+					alt="site_title"
+					cms:eval="src"
+					cms:constant="alt"
+					/>
+			</cms:if>
+
+			<!-- Use logo sprite -->
+			<cms:if condition="isset($template['logo_sprite_icon'])">
+					<cms:svg
+						file="$template['sprite']"
+						symbol="$template['logo_sprite_icon']"
+						cms:eval="file,symbol"
+						/>
+			</cms:if>
+
 			<cms:if condition="isset($template['slogan'])">
 				<span><cms:text constant="$template['slogan']" cms:eval="constant"/></span>
 			</cms:if>
