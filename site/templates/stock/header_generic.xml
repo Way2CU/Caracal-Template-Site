@@ -21,7 +21,7 @@
 -->
 <document>
 	<header
-		class="'stock generic mobile_title'.(isset($template['fixed']) ? ' fixed' : '').(isset($template['class']) ? $template['class'] : '')"
+		class="'stock generic mobile_title'.(isset($template['fixed']) ? ' fixed' : '').(isset($template['class']) ? ' '.$template['class'] : '')"
 		cms:eval="class"
 		>
 		<!-- Toggle mobile menu link -->
