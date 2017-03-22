@@ -12,7 +12,7 @@
 <document>
 	<a class="stock generic image" href="$params['image']" cms:eval="href">
 		<img
-			src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain'])) ? constant($template['constrain'])) : Thumbnail::CONSTRAIN_BOTH)"
+			src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
