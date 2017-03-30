@@ -23,6 +23,19 @@ footer div.copyright.light {
 	background-image: url(../../images/stock/way2cu-color.svg);
 }
 
+footer div.copyright.light a {
+	color: #08b8c7;
+	color: rgba(8, 184, 199, 0.7);
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+footer div.copyright.light a {
+	color: #08b8c7;
+	color: rgba(8, 184, 199, 1);
+}
+
+
 footer div.copyright a {
 	text-decoration: underline;
 }
