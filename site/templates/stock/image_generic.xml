@@ -5,9 +5,10 @@
 	thumbnail_size - Specifies the size of thumbnail image.
 
   The following parameters are optional:
-	title       - If present will show title of specified image;
-	description - If present will show description of image;
-	constrain   - Specifies the constrain aspects (see Thumbnail in gallery for more information).
+	title          - If present will show title of specified image;
+	description    - If present will show description of image;
+	constrain      - Specifies the constrain aspects [eg. Thumbnail::CONSTRAIN_BOTH];
+	thumbnail_size - Size of the image to generate.
  -->
 <document>
 	<a class="stock generic image" href="$params['image']" cms:eval="href">
