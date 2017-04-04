@@ -6,7 +6,7 @@
  * Authors: Mladen Mijatov
  */
 
-footer div.copyright {
+div.copyright {
 	padding: 20px 0px;
 	padding-left: 55px;
 
@@ -19,14 +19,14 @@ footer div.copyright {
 	direction: ltr;
 }
 
-footer div.copyright.light {
+div.copyright.light {
 	background-image: url(../../images/stock/way2cu-color.svg);
 }
 
-footer div.copyright a {
+div.copyright a {
 	text-decoration: underline;
 }
 
-footer div.copyright a:hover {
+div.copyright a:hover {
 	text-decoration: none;
 }
