@@ -20,7 +20,7 @@
 
 		<!-- Title -->
 		<cms:if condition="isset($template['title'])">
-			<h4><cms:var param="name" multilanguage="yes"/></h4>
+			<h4><cms:var param="title" multilanguage="yes"/></h4>
 		</cms:if>
 
 		<!-- Description -->
