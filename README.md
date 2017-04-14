@@ -12,7 +12,7 @@ The following steps need to be executed in order to get a new fully functional d
 git clone git@github.com:You/New-Site.git New-Site
 ```
 * Go in to `New-Site` directory;
-* We need to add [Caracal-Site](https://github.com/Way2CU/Caracal-Site) as `upstream` so Git knows where to pull things from. You do that with following command:
+* We need to add [Caracal-Template-Site](https://github.com/Way2CU/Caracal-Template-Site) as `upstream` so Git knows where to pull things from. You do that with following command:
 ```
 git remote add upstream https://github.com/Way2CU/Caracal-Template-Site.git
 ```
