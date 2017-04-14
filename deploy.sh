@@ -16,4 +16,4 @@ if [ ! -f "hosts.txt" ]; then
 	exit 2
 fi
 
-ansible-playbook --limit @hosts.txt deploy.yml &
+ansible-playbook --limit @hosts.txt deploy.yml

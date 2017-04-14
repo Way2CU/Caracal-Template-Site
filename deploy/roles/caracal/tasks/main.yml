@@ -1,8 +1,8 @@
 ---
 - name: Checking version to deploy
   fail:
-      msg: 'Due to compatibility concerns you can not deploy `release` or `development` branch.'
-  when: site.caracal_branch == 'development' or site.caracal_branch == 'release'
+      msg: 'Due to compatibility concerns you can not deploy `develop` branch.'
+  when: site.caracal_branch == 'development'
 
 - name: Remove cgi-bin directory
   file: path={{site_directory}}/cgi-bin
