@@ -1,4 +1,4 @@
-# Kodkod-Template-Site
+# Kodkod-Template
 
 Default Kodkod site with predefined Vagrantfile for easy start. This version of base site structure contains commonly used template for even faster development.
 
