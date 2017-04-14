@@ -1,0 +1,22 @@
+/**
+ * Themes Style Sheet
+ * Template Name
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors:
+ */
+
+.theme('regular') {
+	@color_text: #333333;
+	@color_background: white;
+}
+
+.theme('reverse') {
+	@color_text: white;
+	@color_background: #333333;
+}
+
+// mixin used for publishing selected theme name
+.theme(@name) {
+	@theme: @name;
+}
