@@ -2,7 +2,7 @@
 
 Default Kodkod site with predefined Vagrantfile for easy start. This version of base site structure contains commonly used template for even faster development.
 
-Documentation about additional elements and caracal extensions is [available here](docs/caracal.markdown).
+Documentation about additional elements and caracal extensions is [available here](doc/caracal.markdown).
 
 ### Preparation
 
