@@ -12,6 +12,7 @@
 		slogan                  - Text constant to be shown next to logo image;
 		menu                    - Relative path to menu items template;
 		phone                   - Text constant to use for phone number;
+		phone_icon              - Phone icon image file;
 		phone_sprite_icon       - SVG file and id of icon in images directory;
 		fixed                   - If present menu will be positioned fixed to the browser window;
 		mobile_menu_sprite_icon - SVG file and id of icon in images directory;
@@ -74,9 +75,19 @@
 		<cms:if condition="isset($template['phone'])">
 			<a
 				class="phone"
-				href="'tel:'.urlencode(Language::getText($template['phone']))"
+				href="'tel:'.urlencode(Language::get_text($template['phone']))"
 				cms:eval="href"
 				>
+				<!-- Use phone image -->
+				<cms:if condition="isset($template['phone_icon'])">
+					<img
+						src="_BASEURL.'/site/images/'.$template['phone_icon']"
+						alt="Language::get_text($template['phone'])"
+						cms:eval="src,alt"
+						/>
+				</cms:if>
+
+				<!-- Use sprice icon -->
 				<cms:if condition="isset($template['phone_sprite_icon'])">
 					<cms:svg
 						file="$template['sprite']"
