@@ -1,6 +1,6 @@
 # Caracal Site - Development Environment
 #
-# Copyright © 2014. Way2CU. All Rights Reserved.
+# Copyright © 2017. Way2CU. All Rights Reserved.
 # Author: Mladen Mijatov
 
 Vagrant.configure('2') do |config|
@@ -12,14 +12,11 @@ Vagrant.configure('2') do |config|
 		path = File.dirname(__FILE__)
 		name = File.basename(path)
 
-		if name == 'Site' or name == 'Web'
+		if name == 'Template'
 			vm.name = File.basename(File.dirname(path))
 		else
 			vm.name = name
 		end
-
-		# configure virtualization options
-		vm.customize [ "modifyvm", :id, "--paravirtprovider", "kvm" ]
 
 		# configure virtual machine resources
 		vm.memory = 256
