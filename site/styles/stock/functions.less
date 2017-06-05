@@ -9,7 +9,7 @@
  * Define properties for specified number of elements in
  * row with margin taken into account.
  */
-.width-elements-in-row(@count: 5, @margin: 0) {
+.elements-in-row(@count: 5, @margin: 0) {
 	width: calc(~'(100% - ' (@count - 1) * @margin ~') / ' @count);
 	margin-right: @margin;
 	box-sizing: border-box;
