@@ -25,3 +25,11 @@
 		margin-right: 0;
 	}
 }
+
+/**
+ * Calculate padding so container size ends up at least size of
+ * finger for easier use on mobile phones.
+ */
+.finger-size-padding(@size: 1em, @finger_size: 2.5rem) {
+	padding: calc(~'(' @finger_size ~' - ' @size ~') / 2');
+}
