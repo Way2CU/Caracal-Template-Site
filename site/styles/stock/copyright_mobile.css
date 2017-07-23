@@ -8,11 +8,11 @@
 
 div.copyright {
 	padding: 20px 0px;
-	padding-left: 55px;
+	padding-left: 75px;
 
 	background-image: url(../../images/stock/way2cu-black.svg);
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: 20px center;
 	background-size: 50px 50px;
 
 	font-size: 0.9rem;
