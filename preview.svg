@@ -1,0 +1,27 @@
+<svg width="360" height="500" viewbox="0 0 360 500">
+	<!-- Header -->
+	<g>
+		<rect
+			class="preview-fill-header"
+			x="0" y="0"
+			width="360" height="50"
+			/>
+		<circle
+			class="preview-fill-background"
+			cx="25" cy="25" r="20"
+			/>
+	</g>
+
+	<!-- Content -->
+	<g>
+	</g>
+
+	<!-- Footer -->
+	<g>
+		<rect
+			class="preview-fill-footer"
+			x="0" y="480"
+			width="360" height="20"
+			/>
+	</g>
+</svg>

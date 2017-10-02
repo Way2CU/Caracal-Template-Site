@@ -1,0 +1,15 @@
+<svg width="170" height="130" viewbox="0 0 170 130">
+	<g>
+		<rect
+			class="preview-fill-header"
+			x="0" y="0"
+			width="170" height="60"
+			fill="#a0a0a0"
+			/>
+		<circle
+			class="preview-fill-background"
+			cx="30" cy="30" r="25"
+			fill="#ffffff"
+			/>
+	</g>
+</svg>
