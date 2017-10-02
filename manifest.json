@@ -1,0 +1,20 @@
+{
+	"name": {
+		"en": "Simple site"
+	},
+	"author": "John Doe",
+	"contact": "john@email.com",
+	"version": "1.0",
+	"updated": "2017-12-31 12:00:00",
+	"categories": ["mini-site"],
+	"features": ["ltr"],
+	"themes": [
+		{
+			"name": "default",
+			"colors": {
+				"text": "#333333",
+				"background": "#ffffff"
+			}
+		}
+	]
+}
