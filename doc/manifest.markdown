@@ -39,4 +39,4 @@ Properties:
 
 Theme object:
 - `name`: Lower-case theme name which must match one defined in `site/styles/themes.less` file;
-- `colors`: List of colors to be presented to user. These colors are applied to [preview SVG image](preview.markdown).
+- `colors`: List of colors to be presented to user. These colors are only used to update the [preview SVG image](preview.markdown).
