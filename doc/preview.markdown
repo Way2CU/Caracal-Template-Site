@@ -13,11 +13,11 @@ Table of contents:
 
 ## Theme colors
 
-[Manifes file](manifest.markdown) contains `themes` section in which developer can define different color themes particular template supports. Colors defined in this section are only used to update preview image by defining named classes.
+[Manifest file](manifest.markdown) contains `themes` section in which developer can define different color themes particular template supports. Colors defined in this section are only used to update preview image by defining named classes.
 
 Kodkod will generate separate class for `fill` and separate class for `stroke` to provide maximum control of the behavior to the developer. All of the dynamic contain `preview` prefix followed by type of color and color name defined in theme object.
 
-Apart from these theme defined colors you can define your own stylesheet inside of SVG file and use it to adjust the look of the preview image.
+Apart from these theme defined colors you can define your own style sheet inside of SVG file and use it to adjust the look of the preview image.
 
 For example, if the theme colors are defined as:
 
