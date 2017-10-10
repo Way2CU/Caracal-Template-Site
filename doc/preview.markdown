@@ -76,7 +76,7 @@ These classes can then be used in SVG file to achieve desired effect. As definin
 
 ## Logo image
 
-Image is applied through specially defined `preview-logo-image` class by using `background-image` CSS property. Mask is applied through a different class (`preview-logo-mask`). This is done to provide additional flexibility when displaying logo in preview image. Both of these classes _can_ be used on a same element.
+Logo must be presented through `image` SVG tag with `preview-logo-image` class. System will use this class name to find all elements in preview image and set `xlink:href` attribute on them containing chosen logo. Mask is applied through a different class (`preview-logo-mask`). This is done to provide additional flexibility when displaying logo in preview image. Both of these classes _can_ be used on a same element.
 
 On final site image will be saved in it's original format and `@logo_image` variable in main style sheet updated.
 
@@ -84,3 +84,4 @@ On final site image will be saved in it's original format and `@logo_image` vari
 ## Site title
 
 Any element with `preview-site-title` class will have it's content changed to user provided value. On final site this value will be saved in language file under `site_title` language constant.
+
