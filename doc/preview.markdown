@@ -83,4 +83,4 @@ On final site image will be saved in it's original format and `@logo_image` vari
 
 ## Site title
 
-Any element with `preview-site-title` will have it's content changed to user provided value. On final site this value will be saved in language file under `site_title` language constant.
+Any element with `preview-site-title` class will have it's content changed to user provided value. On final site this value will be saved in language file under `site_title` language constant.
