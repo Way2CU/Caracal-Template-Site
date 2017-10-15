@@ -71,7 +71,7 @@ header when (@theme='inverse') {
 
 ### Preview SVG image
 
-To present users with insight into how certain color scheme, logo and other data would look on their site system presents, in configuration dialog, small preview of selected options. This preview is a single SVG file modified on the fly. This file is required for each site template. Example can be found in base template along with additional documentation.
+To present users with insight into how certain color scheme, logo and other data would look on their site system presents, in configuration dialog, small preview of selected options. This preview is a single SVG file modified on the fly. This file is required for each site template. Example can be found in base template along with [additional documentation](preview.markdown).
 
 
 ## Attributes
