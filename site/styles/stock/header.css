@@ -20,6 +20,7 @@ header.stock.generic.fixed {
 	left: 0px;
 	right: 0px;
 	z-index: 100000;
+	transform: translateZ(0);
 }
 
 header.stock.generic a.logo {

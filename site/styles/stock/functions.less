@@ -1,0 +1,35 @@
+/**
+ * Commonly used convenience functions.
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+/**
+ * Define properties for specified number of elements in
+ * row with margin taken into account.
+ */
+.elements-in-row(@count: 5, @margin: 0) {
+	width: calc(~'(100% - ' (@count - 1) * @margin ~') / ' @count);
+	margin-right: @margin;
+	box-sizing: border-box;
+
+	html[dir=rtl] & {
+		margin-left: @margin;
+		margin-right: 0;
+	}
+
+	&:nth-child(@{count}n + 0),
+	html[dir=rtl] &:nth-child(@{count}n + 0) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+/**
+ * Calculate padding so container size ends up at least size of
+ * finger for easier use on mobile phones.
+ */
+.finger-size-padding(@size: 1em, @finger_size: 2.5rem) {
+	padding: calc(~'(' @finger_size ~' - ' @size ~') / 2');
+}

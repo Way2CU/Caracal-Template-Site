@@ -5,12 +5,14 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors:
  */
+@import (reference) 'stock/functions.less';
 @import (reference) 'themes.less';
 @import 'common.less';
+@import 'fonts.less';
 
-@import 'header_mobile.less';
-@import 'content_mobile.less';
-@import 'footer_mobile.less';
+// @import 'header_mobile.less';
+// @import 'content_mobile.less';
+// @import 'footer_mobile.less';
 
 // load theme
 .theme(@default-theme);
@@ -18,4 +20,28 @@
 body {
 	background-color: @color_background;
 	color: @color_text;
+	font-family: generic;
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: generic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+	margin-bottom: @header_spacing;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	margin-bottom: @paragraph_spacing;
+	padding: 0;
 }

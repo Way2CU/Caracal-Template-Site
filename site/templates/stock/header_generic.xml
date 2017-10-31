@@ -11,92 +11,177 @@
 		class                   - Class for the header tag;
 		slogan                  - Text constant to be shown next to logo image;
 		menu                    - Relative path to menu items template;
+		inline_menu             - If present menu items will be added to mobile_title instead of mobile_menu;
 		phone                   - Text constant to use for phone number;
+		phone_icon              - Phone icon image file;
 		phone_sprite_icon       - SVG file and id of icon in images directory;
 		fixed                   - If present menu will be positioned fixed to the browser window;
 		mobile_menu_sprite_icon - SVG file and id of icon in images directory;
 		sprite                  - SVG file containing sprites;
 
-	The following parameters are required: logo, menu
+	The following parameters are required: logo or logo_sprite_icon, menu
 -->
 <document>
-	<header
-		class="'stock generic mobile_title'.(isset($template['fixed']) ? ' fixed' : '').(isset($template['class']) ? ' '.$template['class'] : '')"
-		cms:eval="class"
-		>
-		<!-- Toggle mobile menu link -->
-		<cms:if condition="_MOBILE_VERSION and isset($template['menu'])">
-			<a class="menu">
-				<cms:if condition="isset($template['mobile_menu_sprite_icon'])">
-					<cms:svg
-						file="$template['sprite']"
-						symbol="$template['mobile_menu_sprite_icon']"
-						cms:eval="file,symbol"
+	<cms:desktop>
+		<header
+			class="'stock generic '.(isset($template['fixed']) ? ' fixed' : '').(isset($template['class']) ? ' '.$template['class'] : '')"
+			cms:eval="class"
+			>
+
+			<!-- Logo image leading to home page -->
+			<a class="logo" href="URL::make()" cms:eval="href">
+				<!-- Use logo image -->
+				<cms:if condition="isset($template['logo'])">
+					<img
+						src="_BASEURL.'/site/images/'.$template['logo']"
+						alt="site_title"
+						cms:eval="src"
+						cms:constant="alt"
 						/>
 				</cms:if>
-			</a>
-		</cms:if>
 
-		<!-- Logo image leading to home page -->
-		<a class="logo" href="URL::make()" cms:eval="href">
-			<!-- Use logo image -->
-			<cms:if condition="isset($template['logo'])">
-				<img
-					src="_BASEURL.'/site/images/'.$template['logo']"
-					alt="site_title"
-					cms:eval="src"
-					cms:constant="alt"
-					/>
-			</cms:if>
-
-			<!-- Use logo sprite -->
-			<cms:if condition="isset($template['logo_sprite_icon'])">
+				<!-- Use logo sprite -->
+				<cms:if condition="isset($template['logo_sprite_icon'])">
 					<cms:svg
 						file="$template['sprite']"
 						symbol="$template['logo_sprite_icon']"
 						cms:eval="file,symbol"
 						/>
-			</cms:if>
+				</cms:if>
 
-			<cms:if condition="isset($template['slogan'])">
-				<span><cms:text constant="$template['slogan']" cms:eval="constant"/></span>
-			</cms:if>
-		</a>
+				<cms:if condition="isset($template['slogan'])">
+					<span><cms:text constant="$template['slogan']" cms:eval="constant"/></span>
+				</cms:if>
+			</a>
 
-		<!-- Main menu -->
-		<cms:if condition="_DESKTOP_VERSION and isset($template['menu'])">
+			<!-- Main menu -->
 			<nav id="main">
 				<cms:template file="$template['menu']" cms:eval="file"/>
 			</nav>
-		</cms:if>
 
-		<!-- Phone number icon -->
-		<cms:if condition="isset($template['phone'])">
-			<a
-				class="phone"
-				href="'tel:'.urlencode(Language::getText($template['phone']))"
-				cms:eval="href"
-				>
-				<cms:if condition="isset($template['phone_sprite_icon'])">
+			<!-- Phone number icon -->
+			<cms:if condition="isset($template['phone'])">
+				<a
+					class="phone"
+					href="'tel:'.urlencode(Language::get_text($template['phone']))"
+					cms:eval="href"
+					>
+					<!-- Use phone image -->
+					<cms:if condition="isset($template['phone_icon'])">
+						<img
+							src="_BASEURL.'/site/images/'.$template['phone_icon']"
+							alt="Language::get_text($template['phone'])"
+							cms:eval="src,alt"
+							/>
+					</cms:if>
+
+					<!-- Use sprice icon -->
+					<cms:if condition="isset($template['phone_sprite_icon'])">
+						<cms:svg
+							file="$template['sprite']"
+							symbol="$template['phone_sprite_icon']"
+							cms:eval="file,symbol"
+							/>
+					</cms:if>
+
+					<cms:desktop>
+						<cms:text constant="$template['phone']" cms:eval="constant"/>
+					</cms:desktop>
+				</a>
+			</cms:if>
+		</header>
+	</cms:desktop>
+
+	<cms:mobile>
+		<header
+			class="'stock generic mobile_title'.(isset($template['fixed']) ? ' fixed' : '').(isset($template['class']) ? ' '.$template['class'] : '')"
+			cms:eval="class"
+			>
+			<!-- Toggle mobile menu link -->
+			<cms:if condition="!isset($template['inline_menu'])">
+				<a class="menu">
+					<cms:if condition="isset($template['mobile_menu_sprite_icon'])">
+						<cms:svg
+							file="$template['sprite']"
+							symbol="$template['mobile_menu_sprite_icon']"
+							cms:eval="file,symbol"
+							/>
+					</cms:if>
+				</a>
+			</cms:if>
+
+			<!-- Inline menu for mobile header -->
+			<cms:if condition="isset($template['inline_menu'])">
+				<nav id="main">
+					<cms:template file="$template['menu']" cms:eval="file"/>
+				</nav>
+			</cms:if>
+
+			<!-- Logo image leading to home page -->
+			<a class="logo" href="URL::make()" cms:eval="href">
+				<!-- Use logo image -->
+				<cms:if condition="isset($template['logo'])">
+					<img
+						src="_BASEURL.'/site/images/'.$template['logo']"
+						alt="site_title"
+						cms:eval="src"
+						cms:constant="alt"
+						/>
+				</cms:if>
+
+				<!-- Use logo sprite -->
+				<cms:if condition="isset($template['logo_sprite_icon'])">
 					<cms:svg
 						file="$template['sprite']"
-						symbol="$template['phone_sprite_icon']"
+						symbol="$template['logo_sprite_icon']"
 						cms:eval="file,symbol"
 						/>
 				</cms:if>
 
-				<cms:desktop>
-					<cms:text constant="$template['phone']" cms:eval="constant"/>
-				</cms:desktop>
+				<cms:if condition="isset($template['slogan'])">
+					<span><cms:text constant="$template['slogan']" cms:eval="constant"/></span>
+				</cms:if>
 			</a>
-		</cms:if>
-	</header>
 
-	<cms:if condition="_MOBILE_VERSION and isset($template['menu'])">
-		<div class="mobile_menu">
-			<nav id="main">
-				<cms:template file="$template['menu']" cms:eval="file"/>
-			</nav>
-		</div>
-	</cms:if>
+			<!-- Phone number icon -->
+			<cms:if condition="isset($template['phone'])">
+				<a
+					class="phone"
+					href="'tel:'.urlencode(Language::get_text($template['phone']))"
+					cms:eval="href"
+					>
+					<!-- Use phone image -->
+					<cms:if condition="isset($template['phone_icon'])">
+						<img
+							src="_BASEURL.'/site/images/'.$template['phone_icon']"
+							alt="Language::get_text($template['phone'])"
+							cms:eval="src,alt"
+							/>
+					</cms:if>
+
+					<!-- Use sprice icon -->
+					<cms:if condition="isset($template['phone_sprite_icon'])">
+						<cms:svg
+							file="$template['sprite']"
+							symbol="$template['phone_sprite_icon']"
+							cms:eval="file,symbol"
+							/>
+					</cms:if>
+
+					<cms:desktop>
+						<cms:text constant="$template['phone']" cms:eval="constant"/>
+					</cms:desktop>
+				</a>
+			</cms:if>
+
+			<!-- Mobile menu -->
+			<cms:if condition="!isset($template['inline_menu'])">
+				<div class="mobile_menu">
+					<nav id="main">
+						<cms:template file="$template['menu']" cms:eval="file"/>
+					</nav>
+				</div>
+			</cms:if>
+		</header>
+	</cms:mobile>
 </document>
