@@ -12,6 +12,7 @@ Example:
 	"author": "John Doe",
 	"contact": "john@email.com",
 	"version": "1.0",
+	"caracal_version": "v0.4",
 	"updated": "2017-07-07 12:00:01",
 	"categories": ["landing_page", "mini_site"],
 	"features": ["ltr", "rtl"],
@@ -32,6 +33,7 @@ Properties:
 - `author`: Name of the author;
 - `contact`: Contact email address of the author;
 - `version`: Version of the template;
+- `caracal_version`: Version of Caracal system this template is designed for. Must correspond with branch in [Caracal repository](https://github.com/Way2CU/Caracal);
 - `updated`: Date and time of last template update;
 - `categories`: Subset of categories this template belongs to. Categories listed here that are not part of [global categories](categories.markdown) list will be ignored;
 - `features`: Subset of [features](features.markdown) template implements;
