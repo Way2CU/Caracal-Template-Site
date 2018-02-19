@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document
+	style-desktop="generic.less"
+	style-mobile="generic.mobile.less"
+	name-constant="variation_article_generic"
+	>
+	<cms:module
+		name="articles"
+		action="show"
+		id=""
+		template="kodkod/articles/generic.xml"
+		kodkod:editable="id"
+		/>
+</document>
