@@ -8,7 +8,6 @@
  */
 
 // document standard
-define('_STANDARD', 'html5');
 define('_TIMEZONE', 'America/New_York');
 
 define('DEBUG', 1);
