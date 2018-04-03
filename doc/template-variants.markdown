@@ -32,6 +32,7 @@ Example file:
 ```json
 {
 	"generic": {
+		"default": true,
 		"name": "variation_article_generic",
 		"preview_image": "generic.png",
 		"stylesheet": {
@@ -44,6 +45,7 @@ Example file:
 ```
 
 Available variant keys:
+- `default` - Whether this variant is default when creating new element;
 - `name` - Language constant whose value will be used when presenting variant to user during editing process. Value is loaded from the template `data/language_<code>.json` file;
 - `preview_image` - Path to preview image relative to metadata file. Acceptable formats are either PNG or SVG;
 - `stylesheet` - Optional object containing file names of styles located in `styles/kodkod/<module>/` directory. If present these styles will be included on the page where variant is used;

@@ -1,5 +1,6 @@
 {
 	"generic": {
+		"default": true,
 		"name": "variation_article_generic",
 		"preview_image": "generic.png",
 		"stylesheet": {
