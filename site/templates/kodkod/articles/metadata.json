@@ -1,0 +1,11 @@
+{
+	"generic": {
+		"name": "variation_article_generic",
+		"preview_image": "generic.png",
+		"stylesheet": {
+			"desktop": "generic.less",
+			"mobile": "generic.mobile.less"
+		},
+		"editable": ["id"]
+	}
+}
