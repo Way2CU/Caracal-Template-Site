@@ -1,7 +1,7 @@
 {
 	"generic": {
 		"default": true,
-		"name": "variation_article_generic",
+		"name": "variant_article_generic",
 		"preview_image": "generic.png",
 		"stylesheet": {
 			"desktop": "generic.less",
