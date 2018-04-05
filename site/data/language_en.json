@@ -1,4 +1,8 @@
 {
     "site_title": "Site title",
-	"variant_article_generic": "Generic"
+	"variant_article_generic": "Generic",
+	"variant_article_two_columns": "Two columns",
+	"variant_article_side_image": "Image on the side",
+	"variant_article_floating_image": "Floating image",
+	"variant_article_background_image": "Background image"
 }

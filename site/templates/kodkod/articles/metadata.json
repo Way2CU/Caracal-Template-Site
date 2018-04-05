@@ -2,10 +2,46 @@
 	"generic": {
 		"default": true,
 		"name": "variant_article_generic",
-		"preview_image": "generic.png",
+		"preview_image": "preview/generic.svg",
 		"stylesheet": {
 			"desktop": "generic.less",
 			"mobile": "generic.mobile.less"
+		},
+		"editable": ["id"]
+	},
+	"two_columns": {
+		"name": "variant_article_two_columns",
+		"preview_image": "preview/two_columns.svg",
+		"stylesheet": {
+			"desktop": "two_columns.less",
+			"mobile": "two_columns.mobile.less"
+		},
+		"editable": ["id"]
+	},
+	"side_image": {
+		"name": "variant_article_side_image",
+		"preview_image": "preview/side_image.svg",
+		"stylesheet": {
+			"desktop": "with_image.less",
+			"mobile": "with_image.mobile.less"
+		},
+		"editable": ["id"]
+	},
+	"floating_image": {
+		"name": "variant_article_floating_image",
+		"preview_image": "preview/floating_image.svg",
+		"stylesheet": {
+			"desktop": "floating_image.less",
+			"mobile": "floating_image.mobile.less"
+		},
+		"editable": ["id"]
+	},
+	"background_image": {
+		"name": "variant_article_background_image",
+		"preview_image": "preview/background_image.svg",
+		"stylesheet": {
+			"desktop": "background_image.less",
+			"mobile": "background_image.mobile.less"
 		},
 		"editable": ["id"]
 	}
