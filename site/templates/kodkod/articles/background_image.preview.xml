@@ -7,14 +7,6 @@
 			background-repeat: no-repeat;
 			background-size: 100% auto;
 		}
-
-		article p {
-			text-shadow: 1px 1px 1px black;
-		}
-
-		html[dir=rtl] article p {
-			text-shadow: -1px 1px 1px black;
-		}
 	</style>
 
 	<template>
