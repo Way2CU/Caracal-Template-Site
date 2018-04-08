@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
 	<style>
-		article {
-			display: block;
-			min-height: 3em;
-			border: 1px dotted rgba(0, 0, 0, 0.3);
-		}
 	</style>
 
 	<template>

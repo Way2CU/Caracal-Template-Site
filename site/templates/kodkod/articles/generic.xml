@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
 	<article class="kodkod generic">
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+		<cms:markdown param="content" multilanguage="yes"/>
 	</article>
 </document>
