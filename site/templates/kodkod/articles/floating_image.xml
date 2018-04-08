@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<article class="kodkod floating_image">
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+
+		<div>
+			<!-- Image on the side -->
+			<cms:module
+				name="gallery"
+				action="show_image"
+				group="$params['gallery']"
+				cms:eval="group"
+				/>
+
+			<!-- Content -->
+			<cms:markdown param="content" multilanguage="yes"/>
+		</div>
+	</article>
+</document>
