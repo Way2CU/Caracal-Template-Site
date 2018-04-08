@@ -5,12 +5,15 @@
 			background-image: url(images/no-image.svg);
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: auto 100%;
+			background-size: 100% auto;
 		}
 
 		article p {
-			mix-blend-mode: overlay;
-			text-shadow: 0px 0px 2px black;
+			text-shadow: 1px 1px 1px black;
+		}
+
+		html[dir=rtl] article p {
+			text-shadow: -1px 1px 1px black;
 		}
 	</style>
 
