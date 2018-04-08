@@ -16,6 +16,8 @@
 			top: 0;
 			right: 0;
 			width: 50%;
+			max-height: 100%
+			border: 1px solid rgb(230, 230, 230);
 		}
 
 		html[dir=rtl] article > div > img {
