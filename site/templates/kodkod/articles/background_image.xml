@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<article
+		class="kodkod background_image"
+		style="'background-image: url('.gallery::get_raw_group_image($params['gallery']).')'"
+		cms:eval="style"
+		>
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+		<cms:markdown param="content" multilanguage="yes"/>
+	</article>
+</document>

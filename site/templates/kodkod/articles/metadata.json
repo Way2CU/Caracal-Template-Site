@@ -36,8 +36,8 @@
 		"name": "variant_article_background_image",
 		"preview_image": "preview/background_image.svg",
 		"stylesheet": {
-			"desktop": "background_image.less",
-			"mobile": "background_image.mobile.less"
+			"desktop": "with_image.less",
+			"mobile": "with_image.mobile.less"
 		},
 		"editable": ["id"]
 	}
