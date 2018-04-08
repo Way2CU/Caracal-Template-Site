@@ -7,6 +7,7 @@
 			max-height: 100%;
 			margin-left: 2em;
 			margin-bottom: 2em;
+			border: 1px solid rgb(230, 230, 230);
 		}
 
 		html[dir=rtl] article > div > img {
@@ -32,6 +33,12 @@
 				<p>Sit explicabo facere est qui maxime voluptas quibusdam. Voluptatibus quos incidunt assumenda rerum. Et minus rerum nihil iste. Autem fuga vitae quidem omnis voluptas.</p>
 
 				<p>Est nesciunt et qui non et vel ipsa. Totam amet placeat amet dolorum dolorum magni. Et cumque totam aspernatur ipsum ut delectus voluptatibus et. Enim ullam reprehenderit laborum eum. Eveniet officiis consequatur necessitatibus architecto id et sed nisi.</p>
+
+				<p>Qui maxime maxime voluptatem et magnam. Velit dolorum aut eaque maiores. Quis eos veritatis aspernatur ea occaecati fugit eos est. Quis occaecati enim eius libero quae blanditiis dolorum quo.</p>
+
+				<p>Suscipit et quam hic doloribus distinctio consequatur. Non eos aut sit voluptatem omnis autem adipisci. Ea natus ducimus ipsum eligendi. Tempore quaerat est placeat nesciunt est saepe modi.</p>
+
+				<p>Consectetur modi nulla in eligendi in occaecati. Id dolores est ratione beatae at. Pariatur sunt magnam perspiciatis quo necessitatibus rerum expedita. Voluptas ut voluptatem dolorem. Quibusdam non voluptatem veritatis. Ut commodi libero rem maxime perspiciatis.</p>
 			</div>
 		</article>
 	</template>
