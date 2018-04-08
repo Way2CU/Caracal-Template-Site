@@ -1,0 +1,37 @@
+/**
+ * Article Style Sheet
+ * Variant with images
+ *
+ * Copyright (c) 2018. by Way2CU, http://way2cu.com
+ */
+
+article.kodkod {
+	&.side_image {
+		// container for image and paragraphs
+		> div {
+			position: relative;
+			padding-right: calc(~'50% - 2em');
+
+			html[dir=rtl] & {
+				padding-right: auto;
+				padding-left: calc(50% + 2em);
+			}
+		}
+
+		// main image
+		> img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+
+			html[dir=rtl] & {
+				right: auto;
+				left: 0;
+			}
+		}
+	}
+
+	&.floating_image {
+	}
+}

@@ -27,8 +27,8 @@
 		"name": "variant_article_floating_image",
 		"preview_image": "preview/floating_image.svg",
 		"stylesheet": {
-			"desktop": "floating_image.less",
-			"mobile": "floating_image.mobile.less"
+			"desktop": "with_image.less",
+			"mobile": "with_image.mobile.less"
 		},
 		"editable": ["id"]
 	},
