@@ -7,7 +7,7 @@
 		}
 
 		html[dir=rtl] article > div {
-			padding-right: auto;
+			padding-right: 0;
 			padding-left: calc(50% + 2em);
 		}
 
