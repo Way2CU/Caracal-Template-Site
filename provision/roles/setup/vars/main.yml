@@ -1,3 +1,4 @@
 database_password: "caracal"
 database_user: "root"
 database_port: 3306
+caracal_branch: "develop"

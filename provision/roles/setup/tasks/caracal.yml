@@ -3,7 +3,7 @@
   git:
     repo: https://github.com/Way2CU/Caracal.git
     dest: /var/www/html
-    version: "{{site.caracal_branch}}"
+    version: "{{caracal_branch}}"
     recursive: yes
 
 - name: Link site directory to Caracal
