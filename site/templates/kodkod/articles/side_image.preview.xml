@@ -27,7 +27,7 @@
 	</style>
 
 	<template>
-		<article>
+		<article class="kodkdo side_image">
 			<h2>Lorem ipsum</h2>
 
 			<div>

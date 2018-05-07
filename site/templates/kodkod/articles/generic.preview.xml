@@ -4,7 +4,7 @@
 	</style>
 
 	<template>
-		<article>
+		<article class="kodkod generic">
 			<h2>Lorem ipsum</h2>
 			<p>Dolor minima enim suscipit praesentium atque esse. Aut voluptatum aliquid aut sint. Aut modi eos unde vitae quis.</p>
 

@@ -18,7 +18,7 @@
 	</style>
 
 	<template>
-		<article>
+		<article class="kodkod floating_image">
 			<h2>Lorem ipsum</h2>
 
 			<div>
