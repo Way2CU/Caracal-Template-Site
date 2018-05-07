@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<style>
+		label {
+			display: block;
+		}
+
+		label span {
+			display: block;
+		}
+	</style>
+
+	<template>
+		<div class="kodkod form generic">
+			<h3>Dolor minima enim suscipit praesentium atque esse.</h3>
+
+			<form action="javascript: void();">
+				<label>
+					<span>Full name:</span>
+					<input type="text" name="full_name"/>
+				</label>
+				<label>
+					<span>Phone:</span>
+					<input type="text" name="phone"/>
+				</label>
+				<label>
+					<span>Email:</span>
+					<input type="email" name="email"/>
+				</label>
+
+				<div class="controls">
+					<button type="submit">Send</button>
+				</div>
+			</form>
+		</div>
+	</template>
+</document>

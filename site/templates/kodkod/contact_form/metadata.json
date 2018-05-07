@@ -1,0 +1,12 @@
+{
+	"generic": {
+		"default": true,
+		"name": "variant_contact_form_generic",
+		"preview_image": "preview/generic.svg",
+		"stylesheet": {
+			"desktop": "generic.less",
+			"mobile": "generic.less"
+		},
+		"editable": ["id"]
+	}
+}
