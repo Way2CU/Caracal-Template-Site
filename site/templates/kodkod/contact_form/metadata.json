@@ -8,5 +8,14 @@
 			"mobile": "generic.less"
 		},
 		"editable": ["id"]
+	},
+	"horizontal": {
+		"name": "variant_contact_form_horizontal",
+		"preview_image": "preview/horizontal.svg",
+		"stylesheet": {
+			"desktop": "horizontal.less",
+			"mobile": "horizontal.mobile.less"
+		},
+		"editable": ["id"]
 	}
 }

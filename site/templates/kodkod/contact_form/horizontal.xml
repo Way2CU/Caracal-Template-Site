@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<div class="kodkod form horizontal">
+		<!-- Include form name if specified -->
+		<cms:if condition="!empty($params['name'])">
+			<h3><cms:var param="name" multilanguage="yes"/></h3>
+		</cms:if>
+
+		<!-- Show same form with stock template -->
+		<cms:module
+			name="contact_form"
+			action="show"
+			id="$params['id']"
+			cms:eval="id"
+			/>
+	</div>
+</document>
