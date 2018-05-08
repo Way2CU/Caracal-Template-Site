@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
 	<style>
+		h3 {
+			margin-bottom: 1rem;
+		}
+
 		label {
-			display: block;
+			display: inline-block;
+			margin-right: 1rem;
+		}
+
+		html[dir=rtl] label {
+			margin-rigth: 0;
+			margin-left: 1rem;
 		}
 
 		label span {
