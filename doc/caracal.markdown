@@ -81,18 +81,19 @@ Attributes provide easy way for developers to control the behavior of template a
 
 ### Element variation `kodkod:variation`
 
-Attribute is used to denote an element of the template which can only be changed to one of predefined variation types. Neither tag containing this attribute nor its children can be removed by the editor. When generating resulting template system will add selected variation as a class to the tag containing the attribute.
+Attribute which allows user to select one of the specified values. This value is used as a class name in generated template. This allows user to further customize looks of the template.
 
+Editor will not modify or remove child elements of the tag containing `kodkod:variation`. Only class is changed. Other classes than listed will be preserved as well.
 
 ```xml
-<header kodkod:variation="generic,fixed">
+<header kodkod:variation="generic,fixed" class="bright generic">
 </header>
 ```
 
 
 ### Container definition `kodkod:container`
 
-Tag containing this attribute is used by the editor as container for other elements in the system. Attribute value lists all element types that are accepted. Optionally maximum number of elements can be specified with `kodkod:count` attribute, which if omitted defaults to one.
+Tag containing this attribute is used by the editor as container for other elements in the system. Attribute value lists all element types that are accepted. Optionally maximum number of elements can be specified with `kodkod:count` attribute, which if omitted defaults to one.Each element must contain `kodkod:type` attribute. 
 
 Developers should not place anything inside of containers other than elements themselves as content will be overwritten by the editor.
 
@@ -104,14 +105,20 @@ Developers should not place anything inside of containers other than elements th
 
 ### Container content type `kodkod:type`
 
-This attribute is used to denote container element and its type. Other attributes in the tag will be used by the editor to present different configuration presets and options to user.
+This attribute is used to denote type of element to be displayed. Other attributes in the tag will be used by the editor to present different configuration presets and options to user.
+
+Attribute can be used in following ways: 
+
+- Standalone without `kodkod:container` and `kodkod:variation` representing an element whose _content_ and _template_ user will be allowed to change and select but type will remain static;
+- In combination with `kodkod:variation` to indicate which is the currently selected variation of the element from the list of selected. In this mode user will be able to select which module to show from list of supported as well as the template and element content;
+- In combination with `kodkod:container` when it indicates of which type container element is allowing selection of supported element types as well as templates and content. 
 
 ```xml
 <div kodkod:container="gallery,features" kodkod:count="1">
 	<cms:module
 		name="articles"
 		action="show_list"
-		template="stock/features_generic.xml"
+		template="kodkod/features/generic.xml"
 		kodkod:type="features"
 		>
 		<param name="icon" value="something.svg"/>
