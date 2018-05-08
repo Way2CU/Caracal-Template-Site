@@ -110,7 +110,6 @@ This attribute is used to denote type of element to be displayed. Other attribut
 Attribute can be used in following ways: 
 
 - Standalone without `kodkod:container` and `kodkod:variation` representing an element whose _content_ and _template_ user will be allowed to change and select but type will remain static;
-- In combination with `kodkod:variation` to indicate which is the currently selected variation of the element from the list of selected. In this mode user will be able to select which module to show from list of supported as well as the template and element content;
 - In combination with `kodkod:container` when it indicates of which type container element is allowing selection of supported element types as well as templates and content. 
 
 ```xml
