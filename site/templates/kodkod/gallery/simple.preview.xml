@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<style>
+		img {
+			width: 100%;
+			height: auto;
+		}
+	</style>
+
+	<template>
+		<img src="images/no-image.svg"/>
+	</template>
+</document>

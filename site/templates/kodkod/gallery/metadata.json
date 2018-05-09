@@ -1,0 +1,8 @@
+{
+	"simple": {
+		"default": true,
+		"name": "variant_gallery_simple",
+		"preview_image": "preview/simple.svg",
+		"editable": ["id"]
+	}
+}
