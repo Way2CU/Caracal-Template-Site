@@ -39,6 +39,7 @@ Example file:
 			"desktop": "generic.less",
 			"mobile": "generic.mobile.less"
 		},
+		"script": "generic.js",
 		"editable": ["id"]
 	}
 }
@@ -49,4 +50,5 @@ Available variant keys:
 - `name` - Language constant whose value will be used when presenting variant to user during editing process. Value is loaded from the template `data/language_<code>.json` file;
 - `preview_image` - Path to preview image relative to metadata file. Acceptable formats are either PNG or SVG;
 - `stylesheet` - Optional object containing file names of styles located in `styles/kodkod/<module>/` directory. If present these styles will be included on the page where variant is used;
+- `script` - Optional JavaScript to be included on pages where variant is used. Script will be included only once per page so it needs to take into account multiple uses of variant;
 - `editable` - List of attributes which system is to treat as editable for this variant.
