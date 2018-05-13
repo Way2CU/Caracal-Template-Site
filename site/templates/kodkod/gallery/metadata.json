@@ -4,5 +4,35 @@
 		"name": "variant_gallery_simple",
 		"preview_image": "preview/simple.svg",
 		"editable": ["id"]
+	},
+	"slider": {
+		"name": "variant_gallery_slider",
+		"preview_image": "preview/slider.svg",
+		"stylesheet": {
+			"desktop": "slider.less",
+			"mobile": "slider.mobile.less"
+		},
+		"script": "slider.js",
+		"editable": ["group"]
+	},
+	"switcher": {
+		"name": "variant_gallery_switcher",
+		"preview_image": "preview/switcher.svg",
+		"stylesheet": {
+			"desktop": "slider.less",
+			"mobile": "slider.mobile.less"
+		},
+		"script": "slider.js",
+		"editable": ["group"]
+	},
+	"stack": {
+		"name": "variant_gallery_stack",
+		"preview_image": "preview/stack.svg",
+		"stylesheet": {
+			"desktop": "stack.less",
+			"mobile": "stack.mobile.less"
+		},
+		"script": "stack.js",
+		"editable": ["group"]
 	}
 }
