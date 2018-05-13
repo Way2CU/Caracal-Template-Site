@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title>Templates test</title>
+			<cms:module name="head_tag" action="show"/>
+		</head>
+
+		<body>
+			<!--
+				 This template is used to test variant implementations and make
+				 sure they are not broken in final form. It is therefore safe to
+				 either ignore or remove!
+			-->
+			<section id="articles">
+				<h1>Articles</h1>
+				<hr/>
+
+				<cms:module
+					name="articles"
+					action="show"
+					template="kodkod/articles/generic.xml"
+					/>
+			</section>
+		</body>
+	</html>
+</document>
