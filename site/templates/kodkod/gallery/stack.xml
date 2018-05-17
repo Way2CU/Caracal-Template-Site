@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<div class="kodkod gallery stack">
+		<h3><cms:var param="name" multilanguage="yes"/></h3>
+
+		<div>
+			<cms:module
+				name="gallery"
+				action="show_image_list"
+				group="$params['id']"
+				template="kodkod/gallery/parts/simple.xml";
+				/>
+		</div>
+	</div>
+</document>

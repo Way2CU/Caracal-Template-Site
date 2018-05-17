@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<style>
+		div.stack div {
+			display: block;
+		}
+
+		div.stack div img {
+			display: inline-block;
+			height: 250px;
+		}
+	</style>
+
+	<template>
+		<div class="kodkod gallery stack">
+			<h3>Dolor minima enim suscipit praesentium atque esse.</h3>
+
+			<div>
+				<img src="images/no-image.svg"/>
+				<img src="images/no-image.svg"/>
+				<img src="images/no-image.svg"/>
+				<img src="images/no-image.svg"/>
+				<img src="images/no-image.svg"/>
+				<img src="images/no-image.svg"/>
+			</div>
+		</div>
+	</template>
+</document>
