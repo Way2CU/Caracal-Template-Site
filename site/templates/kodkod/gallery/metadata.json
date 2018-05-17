@@ -13,7 +13,7 @@
 			"mobile": "slider.mobile.less"
 		},
 		"script": "slider.js",
-		"editable": ["group"]
+		"editable": ["id"]
 	},
 	"switcher": {
 		"name": "variant_gallery_switcher",

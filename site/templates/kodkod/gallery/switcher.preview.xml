@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<style>
+		div.switcher {
+			white-space: nowrap;
+		}
+
+		div.switcher a.control {
+			display: inline-block;
+			vertical-align: top;
+			height: 250px;
+			width: 50px;
+			overflow: hidden;
+		}
+
+		div.switcher a.control:before {
+			display: block;
+			content: '';
+			width: 0;
+			height: 0;
+			position: relative;
+			top: 50%;
+			left: 50%;
+
+			border: 15px solid transparent;
+		}
+
+		div.switcher a.control.previous:before {
+			border-top-color: black;
+			border-left-color: black;
+			transform: translate(-25%, -50%) rotate(-45deg);
+		}
+
+		div.switcher a.control.next:before {
+			border-top-color: black;
+			border-right-color: black;
+			transform: translate(-75%, -50%) rotate(45deg);
+		}
+
+		div.switcher div {
+			display: inline-block;
+			width: calc(100% - 100px);
+			vertical-align: top;
+			overflow: hidden;
+
+			text-align: center;
+			white-space: nowrap;
+		}
+
+		div.switcher div img {
+			display: inline-block;
+			height: 250px;
+		}
+	</style>
+
+	<template>
+		<div class="kodkod gallery switcher">
+			<h3>Dolor minima enim suscipit praesentium atque esse.</h3>
+
+			<a
+				class="control previous"
+				href="javascript:void(0);"
+				title="Previous"
+				/>
+
+			<div>
+				<img src="images/no-image.svg"/>
+			</div>
+
+			<a
+				class="control next"
+				href="javascript:void(0);"
+				title="Previous"
+				/>
+		</div>
+	</template>
+</document>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<div class="kodkod gallery switcher">
+		<h3><cms:var param="name" multilanguage="yes"/></h3>
+
+		<a
+			class="control previous"
+			href="javascript:void(0);"
+			title="page_previous"
+			cms:constant="title"
+			/>
+
+		<div>
+			<cms:module
+				name="gallery"
+				action="show_image_list"
+				group="$params['id']"
+				template="kodkod/gallery/parts/simple.xml";
+				/>
+		</div>
+
+		<a
+			class="control next"
+			href="javascript:void(0);"
+			title="page_next"
+			cms:constant="title"
+			/>
+	</div>
+</document>
