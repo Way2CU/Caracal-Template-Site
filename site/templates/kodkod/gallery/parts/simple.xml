@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<figure>
+		<img
+			src="gallery::get_image($params['id'], 150)"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+		<figcaption><cms:var param="title" multilanguage="yes"/></figcaption>
+	</figure>
+</document>
