@@ -2,7 +2,7 @@
 <document>
 	<cms:module
 		name="gallery"
-		action="show"
+		action="show_image"
 		id=""
 		template="kodkod/gallery/parts/simple.xml"
 		/>

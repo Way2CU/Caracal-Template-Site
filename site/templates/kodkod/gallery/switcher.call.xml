@@ -2,7 +2,7 @@
 <document>
 	<cms:module
 		name="gallery"
-		action="show_group"
+		action="show_image_list"
 		id=""
 		template="kodkod/gallery/switcher.xml"
 		/>
