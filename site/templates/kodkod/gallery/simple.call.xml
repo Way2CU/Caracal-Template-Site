@@ -4,6 +4,6 @@
 		name="gallery"
 		action="show"
 		id=""
-		template="kodkod/gallery/simple.xml"
+		template="kodkod/gallery/parts/simple.xml"
 		/>
 </document>
