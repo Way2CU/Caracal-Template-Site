@@ -8,7 +8,7 @@
 				name="gallery"
 				action="show_image_list"
 				group="$params['id']"
-				template="kodkod/gallery/parts/simple.xml";
+				template="kodkod/gallery/parts/simple.xml"
 				/>
 		</div>
 	</div>
