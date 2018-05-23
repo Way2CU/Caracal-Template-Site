@@ -2,7 +2,7 @@
 <document>
 	<cms:module
 		name="gallery"
-		action="show_image_list"
+		action="show_group"
 		id=""
 		template="kodkod/gallery/stack.xml"
 		/>
