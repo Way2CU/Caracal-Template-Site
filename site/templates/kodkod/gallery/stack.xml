@@ -9,6 +9,7 @@
 				action="show_image_list"
 				group="$params['id']"
 				template="kodkod/gallery/parts/simple.xml"
+				cms:eval="group"
 				/>
 		</div>
 	</div>
