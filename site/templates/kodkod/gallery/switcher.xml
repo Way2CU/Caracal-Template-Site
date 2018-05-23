@@ -14,9 +14,9 @@
 			<cms:module
 				name="gallery"
 				action="show_image_list"
-				group="$params['id']"
+				group_id="$params['id']"
 				template="kodkod/gallery/parts/simple.xml"
-				cms:eval="group"
+				cms:eval="group_id"
 				/>
 		</div>
 
