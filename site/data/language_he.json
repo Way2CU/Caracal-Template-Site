@@ -1,14 +1,14 @@
 {
-	"site_title": "Site title",
-	"variant_article_generic": "Generic",
-	"variant_article_two_columns": "Two columns",
-	"variant_article_side_image": "Image on the side",
-	"variant_article_floating_image": "Floating image",
-	"variant_article_background_image": "Background image",
-	"variant_contact_form_generic": "Generic",
-	"variant_contact_form_horizontal": "Horizontal fields",
-	"variant_gallery_simple": "Simple image",
-	"variant_gallery_slider": "Three image slider",
-	"variant_gallery_switcher": "Single image switcher",
-	"variant_gallery_stack": "Stack of images"
+	"site_title": "כותרת האתר",
+	"variant_article_generic": "כללי",
+	"variant_article_two_columns": "שתי עמודות",
+	"variant_article_side_image": "תמונה לצד טקסט",
+	"variant_article_floating_image": "תמונה משולבת בטקסט",
+	"variant_article_background_image": "תמונת רקע",
+	"variant_contact_form_generic": "כללי",
+	"variant_contact_form_horizontal": "שדות אנכיים",
+	"variant_gallery_simple": "תמונה פשוטה",
+	"variant_gallery_slider": "סליידר שלוש תמונות",
+	"variant_gallery_switcher": "תמונה מתחלפת",
+	"variant_gallery_stack": "אוסף תמונות"
 }
