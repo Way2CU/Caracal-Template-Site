@@ -36,7 +36,7 @@ window.addEventListener('load', function(event) {
 		var slider = new Caracal.Gallery.Slider(number_of_items);
 		slider
 			.images.set_container(container.querySelector('div'))
-			.images.add(container.querySelector('div > img'))
+			.images.add(container.querySelectorAll('div > figure'))
 			.controls.attach_next(controls[0])
 			.controls.attach_previous(controls[1])
 			.images.update();
